@@ -25,7 +25,7 @@ export function SlideHero() {
         
         <p className="text-2xl text-executive-secondary font-light max-w-3xl leading-relaxed mb-16 border-t border-executive-elevated pt-8">
           Intelligent Facility Operations & Machine Learning Platform
-          <span className="block text-lg text-executive-accent mt-4 font-mono font-medium tracking-tight uppercase">Technical Capstone Defense</span>
+          <span className="block text-lg text-executive-accent mt-4 font-mono font-medium tracking-tight uppercase">Phase 2: Enterprise Architecture & Production Readiness</span>
         </p>
         
         <div className="border border-executive-elevated bg-executive-surface/80 backdrop-blur-xl rounded-2xl p-6 w-full max-w-4xl shadow-2xl flex justify-between items-center text-sm">
@@ -47,38 +47,38 @@ export function SlideHero() {
   );
 }
 
-// --- SLIDE 2: PROBLEM STATEMENT ---
+// --- SLIDE 2: PROBLEM STATEMENT (TRANSITION FROM V1) ---
 export function SlideProblemStatement() {
   return (
-    <BaseSlide subtitle="Project Context" title="Problem Statement">
+    <BaseSlide subtitle="Context & Transition" title="Scaling the Baseline PoC">
       <div className="h-full flex flex-col justify-center items-center">
         <div className="w-full max-w-5xl bg-executive-surface border border-executive-elevated rounded-3xl p-10 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-8 text-executive-critical opacity-10"><ShieldAlert size={150} /></div>
+          <div className="absolute top-0 right-0 p-8 text-executive-success opacity-10"><Target size={150} /></div>
           
-          <h3 className="text-3xl font-display font-bold text-white mb-8 relative z-10">Traditional CCTV Monitoring is Passive and Inefficient</h3>
+          <h3 className="text-3xl font-display font-bold text-white mb-8 relative z-10">From Basic Prototype to Enterprise Architecture</h3>
           
           <div className="space-y-6 relative z-10">
             <div className="flex items-start gap-4">
-              <div className="mt-1"><Target size={24} className="text-executive-critical" /></div>
+              <div className="mt-1"><Target size={24} className="text-executive-secondary" /></div>
               <div>
-                <h4 className="text-lg font-bold text-executive-primary mb-1">Human Fatigue</h4>
-                <p className="text-executive-secondary leading-relaxed">Security Operations Center (SOC) personnel cannot actively monitor dozens of camera feeds continuously. Cognitive fatigue leads to missed security events and delayed incident response.</p>
+                <h4 className="text-lg font-bold text-executive-primary mb-1">Phase 1: The Baseline (Demonstrated)</h4>
+                <p className="text-executive-secondary leading-relaxed">Our teammate previously demonstrated the initial Proof of Concept (PoC). It proved the viability of using computer vision for object detection in facility environments. However, a basic script is not a deployable product.</p>
               </div>
             </div>
             
             <div className="flex items-start gap-4">
-              <div className="mt-1"><Target size={24} className="text-executive-critical" /></div>
+              <div className="mt-1"><Zap size={24} className="text-executive-warning" /></div>
               <div>
-                <h4 className="text-lg font-bold text-executive-primary mb-1">Reactive Instead of Proactive</h4>
-                <p className="text-executive-secondary leading-relaxed">Most enterprise camera systems are only reviewed *after* an incident has occurred (forensic analysis). They fail to provide real-time alerts for policy violations (e.g., unauthorized access to server rooms).</p>
+                <h4 className="text-lg font-bold text-executive-primary mb-1">The Architectural Gap</h4>
+                <p className="text-executive-secondary leading-relaxed">The baseline model lacked asynchronous data handling, caused severe UI thread blocking, had no state management, and could not translate raw ML bounding boxes into actionable business intelligence.</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="mt-1"><Target size={24} className="text-executive-critical" /></div>
+              <div className="mt-1"><ShieldAlert size={24} className="text-executive-accent" /></div>
               <div>
-                <h4 className="text-lg font-bold text-executive-primary mb-1">Cloud Bandwidth Limitations</h4>
-                <p className="text-executive-secondary leading-relaxed">Streaming 24/7 high-definition video from edge facilities to a centralized cloud for ML processing consumes massive bandwidth and introduces unacceptable latency.</p>
+                <h4 className="text-lg font-bold text-executive-primary mb-1">Phase 2: Production Readiness (Today's Scope)</h4>
+                <p className="text-white leading-relaxed">We re-engineered the entire stack into a decoupled, highly-performant edge system. We built a Singleton FastAPI inference engine, a Unidirectional React State workflow, and a Client-Side Rule Engine to handle production throughput.</p>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ export function SlideProblemStatement() {
 // --- SLIDE 3: OBJECTIVES ---
 export function SlideObjectives() {
   return (
-    <BaseSlide subtitle="Project Goals" title="System Objectives">
+    <BaseSlide subtitle="Re-engineering Goals" title="System Objectives">
       <div className="h-full flex flex-col justify-center items-center">
         <div className="grid grid-cols-2 gap-8 w-full max-w-5xl">
           
