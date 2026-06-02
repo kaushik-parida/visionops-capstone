@@ -33,7 +33,7 @@ import {
 import { useIntelligence, getClassColor } from '../context/IntelligenceContext';
 import { cn } from '../lib/utils';
 
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
 const CAPTURE_WIDTH = 640;
 const CAPTURE_HEIGHT = 480;
 // SSD MobileNet V2 scores on typical indoor webcam scenes range from 0.20-0.60.
